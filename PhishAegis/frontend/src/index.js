@@ -7,4 +7,7 @@ root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
+
 );
+
+client.login(process.env.TOKEN);
