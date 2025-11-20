@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000
+      - REACT_APP_GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend/src:/app/src
+
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/phishguard
+      - JWT_SECRET=${JWT_SECRET}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+    depends_on:
+      - mongodb
+    volumes:
+      - ./backend:/app
+      - ./ml-model:/app/ml-model
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+      - ./database/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+
+volumes:
+  mongodb_data:

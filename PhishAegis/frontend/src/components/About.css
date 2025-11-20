@@ -1,0 +1,136 @@
+.about-page {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-header h1 {
+  font-size: 36px;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+}
+
+.about-header p {
+  font-size: 18px;
+  color: var(--text-light);
+}
+
+.about-content section {
+  margin-bottom: 60px;
+}
+
+.about-content h2 {
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.about-content p {
+  color: var(--text-light);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.tech-card {
+  background: var(--white);
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+}
+
+.tech-card i {
+  font-size: 40px;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.tech-card h3 {
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.tech-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.workflow {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.workflow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.step-number {
+  background: var(--primary-blue);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.step-content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.project-info {
+  background: var(--light-blue);
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-blue);
+}
+
+.project-details {
+  margin-top: 20px;
+}
+
+.detail-item {
+  margin-bottom: 10px;
+  color: var(--text-light);
+}
+
+.detail-item strong {
+  color: var(--text-dark);
+}

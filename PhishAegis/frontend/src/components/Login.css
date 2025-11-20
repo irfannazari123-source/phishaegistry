@@ -1,0 +1,119 @@
+.login-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-card {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+}
+
+.logo-section {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+  color: white;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.logo-section .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.logo-section .logo i {
+  font-size: 36px;
+}
+
+.logo-section .logo h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.logo-section p {
+  opacity: 0.9;
+  margin: 0;
+}
+
+.login-content {
+  padding: 40px 30px;
+}
+
+.login-content h2 {
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.login-content > p {
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.demo-login-btn {
+  width: 100%;
+  padding: 15px;
+  background: var(--primary-blue);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.demo-login-btn:hover {
+  background: var(--dark-blue);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.demo-info {
+  margin-top: 30px;
+  padding: 20px;
+  background: var(--light-blue);
+  border-radius: 8px;
+}
+
+.demo-info h3 {
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.demo-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.demo-info li {
+  padding: 5px 0;
+  color: var(--text-light);
+  font-size: 14px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.demo-info li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-weight: bold;
+}
